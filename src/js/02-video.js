@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const iframe = document.querySelector('iframe');
     const player = new VimeoPlayer(iframe);
     let currentTime = 0;
+    
     player.on('timeupdate', throttle(onVideoTimeUpdate, 1000));
     player.on('pause', onVideoPause);
     player.on('play', onVideoPlay);
