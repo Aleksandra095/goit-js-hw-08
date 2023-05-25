@@ -12,5 +12,4 @@ player.on('timeupdate', throttle(onLocalRecordTime, 1000))
 function onLocalRecordTime(event) {
     localStorage.setItem('videoplayer-current-time', JSON.stringify(event))
 };
-
 player.setCurrentTime(parseData ? parseData.seconds : 0)
